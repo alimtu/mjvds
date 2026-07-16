@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "IRANSans";
+  src: url("/fonts/iransans/IRANSansXFaNum-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSans";
+  src: url("/fonts/iransans/IRANSansXFaNum-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSans";
+  src: url("/fonts/iransans/IRANSansXFaNum-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSans";
+  src: url("/fonts/iransans/IRANSansXFaNum-DemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSans";
+  src: url("/fonts/iransans/IRANSansXFaNum-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+/*
+  Palette sampled from the property's own photographs:
+  forest = the treeline behind the town, clay = the brickwork and carpets,
+  cream = the terrace stonework.
+*/
+@theme {
+  --color-forest: #14442f;
+  --color-forest-deep: #0c2a1d;
+  --color-forest-soft: #2f6b4f;
+  --color-cream: #fbf9f5;
+  --color-sand: #f2ede4;
+  --color-clay: #c2643b;
+  --color-ink: #1a1614;
+  --color-ink-soft: #6b625c;
+  --color-line: #e6dfd3;
+
+  --font-sans: "IRANSans", system-ui, sans-serif;
+
+  --radius-card: 1.5rem;
+
+  /* Tokens consumed by components/ui/drawer.jsx */
+  --color-background: #fbf9f5;
+  --color-foreground: #1a1614;
+  --color-muted: #e6dfd3;
+  --color-muted-foreground: #6b625c;
+  --color-border: #e6dfd3;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    /* Persian numerals should never render in a Latin fallback face. */
+    font-feature-settings: "ss01";
+  }
+
+  ::selection {
+    background-color: var(--color-forest);
+    color: #fff;
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.12) translate3d(0, -1.5%, 0);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 18s ease-out forwards;
+}
+
+.animate-rise {
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kenburns,
+  .animate-rise {
+    animation: none;
+  }
+}
