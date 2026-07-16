@@ -1,4 +1,5 @@
-import { Flame, Mountain, Utensils } from 'lucide-react';
+import { Flame, Mountain, Utensils, Footprints } from 'lucide-react';
+import { VILLA } from '@/data/villa';
 
 /**
  * The terrace is what distinguishes this listing, so it gets its own section
@@ -48,6 +49,24 @@ export function Terrace() {
             </li>
           ))}
         </ul>
+
+        {/*
+          Access, not a selling point — so it sits apart from the HIGHLIGHTS
+          list rather than posing as a fourth one.
+        */}
+        <div className="mt-7 flex items-start gap-3 rounded-2xl border border-white/15 bg-white/5 p-4">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-white/70">
+            <Footprints className="h-[1.05rem] w-[1.05rem]" strokeWidth={1.75} />
+          </span>
+          <div>
+            <span className="block text-[0.7rem] font-semibold text-white/50">
+              دسترسی
+            </span>
+            <p className="mt-1 text-[0.82rem] font-light leading-relaxed text-white/75">
+              {VILLA.terraceAccess}
+            </p>
+          </div>
+        </div>
 
         <div className="mt-8 grid grid-cols-2 gap-2.5">
           <img

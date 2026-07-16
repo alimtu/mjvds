@@ -21,7 +21,7 @@ inspecting the photos in `public/afra/`. Nothing here is inferred or invented.
 | Brand name | ویلای محمدجواد | Owner decision |
 | Location | گلستان، علی‌آباد کتول | Jabama (`areaType: city`) |
 | Coordinates | 36.903256, 54.8624191 | Owner |
-| Phone | 09910811996 | Owner |
+| Phone | 09010811996 | Owner |
 | Base capacity | 4 guests | Jabama `guests.base` |
 | Max capacity | 8 guests | Jabama `guests.base + guests.extra` |
 | Bedrooms | 1 | Jabama title (یک خوابه) |
@@ -45,7 +45,7 @@ Verified from photographs:
 
 Confirmed by the owner (not visible in photos):
 
-- اینترنت وای‌فای
+- مبلمان
 - پارکینگ
 - تلویزیون
 - آسانسور
@@ -195,7 +195,7 @@ table above and constrained to them.
 
 Prompt requirements:
 
-- Villa name ویلای محمدجواد, in علی‌آباد کتول، گلستان; phone 09910811996
+- Villa name ویلای محمدجواد, in علی‌آباد کتول، گلستان; phone 09010811996
 - Capacity, bedrooms, bed arrangement, check-in/out exactly as the facts table
 - Only the verified + owner-confirmed amenities; no others
 - **Never quote a price** — direct all pricing to a phone call, consistent with

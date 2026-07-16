@@ -25,9 +25,9 @@ export const VILLA = {
   province: 'گلستان',
   address: 'گلستان، علی‌آباد کتول',
 
-  phone: '09910811996',
-  phoneDigits: '09910811996',
-  whatsapp: '989910811996',
+  phone: '09010811996',
+  phoneDigits: '09010811996',
+  whatsapp: '989010811996',
 
   coords: { lat: 36.903256, lng: 54.8624191 },
 
@@ -44,6 +44,15 @@ export const VILLA = {
 
   /** Top floor of an apartment block in town; there is a lift. */
   buildingType: 'آپارتمان طبقه آخر در مجتمع مسکونی، دارای آسانسور',
+
+  /**
+   * The lift stops at the flat (4th floor); the terrace is a further flight up
+   * on the roof. Owner-reported. Stated plainly because a guest who books for
+   * the terrace and cannot manage stairs needs to know before paying, not at
+   * check-in.
+   */
+  terraceAccess:
+    'آسانسور تا طبقه چهارم می‌آید؛ از آنجا یک طبقه پله (حدود ۱۰ تا ۱۵ پله) تا تراس روی بام باقی می‌ماند.',
 
   video: '/villa/video-1.mp4',
   videoPoster: '/villa/video-poster.jpg',
@@ -105,7 +114,7 @@ export const AMENITIES = [
   { icon: 'bbq', label: 'باربیکیو و آتشدان سنگی', source: 'photo' },
   { icon: 'terrace', label: 'تراس بزرگ', source: 'photo' },
   { icon: 'view', label: 'ویوی کوهستان', source: 'photo' },
-  { icon: 'wifi', label: 'اینترنت وای‌فای', source: 'owner' },
+  { icon: 'furniture', label: 'مبلمان', source: 'owner' },
   { icon: 'parking', label: 'پارکینگ', source: 'owner' },
   { icon: 'tv', label: 'تلویزیون', source: 'owner' },
   { icon: 'elevator', label: 'آسانسور', source: 'owner' },
